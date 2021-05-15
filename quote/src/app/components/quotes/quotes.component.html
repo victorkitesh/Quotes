@@ -1,7 +1,7 @@
 <div class="quotes">
-    <div class="quote">
-        <div class="id">0</div>
-        <div class="content">quotes</div>
+    <div class="quote" *ngFor="let quote of quotes; let i= index; ">
+        <div class="id">{{i}}</div>
+        <div class="content">{{quote.content}}</div>
         <button class="delete">remove quote</button>
     </div>
 </div>

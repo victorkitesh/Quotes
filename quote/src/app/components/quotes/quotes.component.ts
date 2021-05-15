@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {quote} from './../../models/quote';
 
 @Component({
   selector: 'app-quotes',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
 
+  quotes!:quote[]
+
   constructor() { }
 
   ngOnInit(): void {
+    this.quotes=[
+      {
+        content:'first quote',
+        completed: false
+      },
+      {
+        content:'second quote',
+        completed: true
+      },
+    ]
   }
 
 }
