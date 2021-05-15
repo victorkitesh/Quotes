@@ -25,4 +25,8 @@ export class QuotesComponent implements OnInit {
     ]
   }
 
+  deleteQuote (id:number){
+    this.quotes = this.quotes.filter((v,i)=>i !==id);
+  }
+
 }
