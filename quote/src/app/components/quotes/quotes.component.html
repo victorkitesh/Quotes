@@ -24,12 +24,14 @@
     <div class="quote" *ngFor="let quote of quotes; let i= index; ">
         <div class="id">{{i}}</div>
         <div class="content">{{quote.content}}</div><br>
+        
         <div class="upvote">
            
            
             <button (click)="likeButtonClick()">Like</button>
            {{numberOfLikes}}
-           
+            <button (click)="dislikeButtonClick()">Dislike</button>
+            {{numberOfDislikes}}
             
         </div>
        
