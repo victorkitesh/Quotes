@@ -1,7 +1,20 @@
 <div class="quotes">
+    <form (submit)="addquote()"> 
+        <input 
+            type="text"
+            name="inputquote"
+            placeholder="Enter quote"
+            class="quote-input"
+            [(ngModel)]="inputquote"
+
+        />
+        <input type="submit" value="addquote" class="quote-submit"/>
+
+    </form>
     <div class="quote" *ngFor="let quote of quotes; let i= index; ">
         <div class="id">{{i}}</div>
         <div class="content">{{quote.content}}</div>
         <button class="delete" (click)="deleteQuote(i)">remove quote</button>
     </div>
 </div>
+ 

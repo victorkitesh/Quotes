@@ -10,6 +10,8 @@ export class QuotesComponent implements OnInit {
 
   quotes!:quote[]
 
+  inputquote:string="";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -27,6 +29,14 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote (id:number){
     this.quotes = this.quotes.filter((v,i)=>i !==id);
+  }
+  addquote (){
+    this.quotes.push({
+      content:this.inputquote,
+      completed:true
+    })
+
+    this.inputquote="";
   }
 
 }
