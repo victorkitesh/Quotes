@@ -24,7 +24,12 @@
     <div class="quote" *ngFor="let quote of quotes; let i= index; ">
         <div class="id">{{i}}</div>
         <div class="content">{{quote.content}}</div><br>
-        
+        <div class="try">
+            <h2> quote details </h2>
+        </div>
+        <div class="">
+            {{myDate | date}}
+        </div>
         <div class="upvote">
            
            

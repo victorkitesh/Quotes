@@ -20,6 +20,8 @@ export class QuotesComponent implements OnInit {
 
   numberOfDislikes:number=0;
 
+  myDate =Date.now();
+
   constructor() { }
 
   ngOnInit(): void {
