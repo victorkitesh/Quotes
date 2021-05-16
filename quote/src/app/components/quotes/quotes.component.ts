@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {quote} from './../../models/quote';
+import {author} from './../../models/author';
 
 @Component({
   selector: 'app-quotes',
@@ -9,21 +10,24 @@ import {quote} from './../../models/quote';
 export class QuotesComponent implements OnInit {
 
   quotes!:quote[]
+  authors!:author[]
 
   inputquote:string="";
+
+  inputauthor:string="";
+
+  numberOfLikes:number=0;
+
+  numberOfDislikes:number=0;
 
   constructor() { }
 
   ngOnInit(): void {
     this.quotes=[
-      {
-        content:'first quote',
-        completed: false
-      },
-      {
-        content:'second quote',
-        completed: true
-      },
+     
+    ]
+    this.authors=[
+
     ]
   }
 
@@ -37,6 +41,21 @@ export class QuotesComponent implements OnInit {
     })
 
     this.inputquote="";
+
+   
+  }
+  addauthor (){
+    this.authors.push({
+      content:this.inputauthor,
+      
+    })
+    this.inputauthor="";
+  }
+  likeButtonClick(){
+    this.numberOfLikes++;
+  }
+  dislikeButtonClick(){
+    this.numberOfDislikes--;
   }
 
 }
