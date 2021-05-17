@@ -22,6 +22,8 @@ export class QuotesComponent implements OnInit {
 
   myDate =Date.now();
 
+ 
+
   constructor() { }
 
   ngOnInit(): void {
