@@ -1,3 +1,18 @@
 .quote-submit{
-    background-color: blue;
+    background-color:yellow;
 }
+.b2{
+    background-color: red;
+}
+.b1{
+    background-color:rgb(9, 152, 241);
+}
+.h2{
+
+    border-radius: 10px;
+    
+    -moz-border-radius: 10px;
+    
+    -webkit-border-radius: 10px;
+    
+    }

@@ -15,7 +15,7 @@
         name="inputauthor"
         placeholder="Enter authors name"
         class="author-input"
-        [(ngModel)]="authorsquote"
+       
 
     /><br>
     <input type="submit" value="add quote" class="quote-submit"/>
@@ -34,9 +34,9 @@
         <div class="upvote">
            
            
-            <button (click)="likeButtonClick()">Like</button>
+            <button class="b1" (click)="likeButtonClick()">Like</button>
            {{numberOfLikes}}
-            <button (click)="dislikeButtonClick()">Dislike</button>
+            <button class="b2"  (click)="dislikeButtonClick()">Dislike</button>
             {{numberOfDislikes}}
             
         </div>
